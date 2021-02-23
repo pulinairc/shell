@@ -6,13 +6,13 @@ export LC_ALL=fi_FI.UTF-8
 ecport LANG=fi_FI.UTF-8
 user="$(grep 'sshd' /var/log/auth.log | awk '/session opened for user/{print $11}' | tail -1)"
 echo "\033[38;2;32;255;208m"
-cat pulinabanner
+cat /home/rolle/shell/pulinabanner
 echo "\033[38;2;255;255;255m"
 echo "Moi ${bold}$user${normal},"
 echo ""
 echo "Tänään on $(date +'%A') ja kello on $(date +'%H.%M'). Sää juuri nyt:"
 echo ""
-cat weather
+cat /home/rolle/shell/weather
 echo ""
 echo "Käytäthän tmux a screenin sijaan. Kiitos."
 echo "Ohjeet: https://www.pulina.fi/ohjeet/pulina-irc-shell-kayttoohje/"
