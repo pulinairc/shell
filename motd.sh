@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+export TERM="xterm-256color"
 bold=$(tput bold)
 normal=$(tput sgr0)
 PULINAGREEN_RGB='\033[38;2;32;255;208m' # Not supported by most clients
